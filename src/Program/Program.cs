@@ -7,6 +7,7 @@
 using System;
 using System.IO;
 using System.Reflection;
+using ConwaysGamesOfLife;
 
 namespace Ucu.Poo.GameOfLife
 {
@@ -14,11 +15,17 @@ namespace Ucu.Poo.GameOfLife
     {
         static void Main(string[] args)
         {
-            string folder = Path.GetDirectoryName(
-                Assembly.GetExecutingAssembly().Location);
-            string boardPath = Path.Combine(folder, "board.txt");
-            // Reemplaza 👇 esta línea con tu código
-            Console.WriteLine(boardPath);
+          string folder = Path.GetDirectoryName(
+            Assembly.GetExecutingAssembly().Location);
+        string boardPath = Path.Combine(folder,"tablero.txt");
+            {
+                bool[,] miTablero = LectorArchivo.Lector("tablero.txt");
+                System.Console.WriteLine("Archivo leído con éxito. Tamaño: " + miTablero.GetLength(0) + "x" + miTablero.GetLength(1));
+            }    
+          
+{
+   
+}
         }
     }
 }
